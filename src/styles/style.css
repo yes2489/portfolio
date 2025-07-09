@@ -17,6 +17,7 @@ body {
   background-color: #292f36;
   color: #f0f0f0;
   min-height: 100vh;
+  padding-top: 75px;
 }
 
 /* Header styles */
@@ -25,9 +26,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2em 2.5em;
-  margin-bottom: 0.5em;
   background-color: #1a1e23;
   z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .site-title {
   font-size: 1.2em;
@@ -51,11 +55,19 @@ li {
   list-style: none;
   padding: 0.15em;
 }
+
+#home,
+#aboutMe,
+#projects,
+#skills {
+  scroll-margin-top: 75px;
+}
+
 .intro-section,
 .projects-section,
 .skills-section {
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 4em 2em;
   display: flex;
   justify-content: center;
@@ -72,7 +84,7 @@ li {
 }
 /* Hero section styles */
 .hero-container {
-  min-height: 90vh;
+  min-height: 91vh;
   display: flex;
   justify-content: center;
   align-items: stretch; /* 높이 맞추기 */

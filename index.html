@@ -8,6 +8,7 @@
     <link rel="icon" href="./src/assets/images/favicon.ico" />
     <link rel="stylesheet" href="./src/styles/responsive.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
+    <script src="./src/assets/js/app.js"></script>
   </head>
   <body>
     <header>
@@ -15,16 +16,14 @@
         <h3>Yang Eun Seo</h3>
       </div>
       <nav class="navbar">
-        <a href="#">Home</a>
-        <a
-          href="https://www.notion.so/1ba6201e069f81809289d20c03c6d067?v=1ba6201e069f81989a5c000c9f4eed8c&source=copy_link"
-          target="_blank"
-          >Notion</a
-        >
+        <a href="#home">Home</a>
+        <a href="#aboutMe">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
       </nav>
     </header>
     <main>
-      <section class="hero-container">
+      <section class="hero-container" id="home">
         <div class="left-box">
           <img src="./src/assets/images/profile.png" alt="Profile Image" />
           <h2>양은서</h2>
@@ -149,7 +148,7 @@
           </div>
         </div>
       </section>
-      <section class="skills-section">
+      <section class="skills-section" id="skills">
         <h2 class="section-title">🛠️ Skills</h2>
         <div class="skills-list">
           <div class="skills-item">
