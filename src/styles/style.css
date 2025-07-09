@@ -135,15 +135,12 @@ li {
 .right-box {
   text-align: left;
   justify-content: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
 }
 .right-box h1 {
   font-size: 3em;
   margin-bottom: 0.5em;
 }
-.right-box span {
+.primary-text {
   color: #98faec;
   font-weight: bold;
 }
@@ -294,7 +291,13 @@ footer {
 /* CSS 애니메이션 */
 
 /* 메인 슬로건 떠오르기 효과용 */
-.right-box.show {
+#main-fadeIn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+#main-fadeIn.show {
   opacity: 1;
   transform: translateY(0);
 }

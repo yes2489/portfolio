@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* 메인 슬로건 떠오르기 효과  */
 function fadeInMainContent() {
-  const mainContent = document.querySelector(".right-box");
+  const mainContent = document.querySelector("#main-fadeIn");
   if (mainContent) {
     // DOM이 완전히 로드되고 난 후 약간의 delay로 자연스러운 효과
     setTimeout(() => {
@@ -42,29 +42,32 @@ function setupSmoothScroll() {
 function observeIntroCards() {
   const cards = document.querySelectorAll(".intro-card");
 
-  // IntersectionObserver 생성 → 요소가 화면에 보이는지 감시
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const card = entry.target;
+
         if (entry.isIntersecting) {
-          // 화면에 들어오면 모든 카드에 순차적 애니메이션 적용
-          cards.forEach((card, index) => {
-            setTimeout(() => {
-              card.classList.add("show"); // CSS에서 show 클래스가 애니메이션을 담당
-            }, index * 200); // 카드마다 0.2초 딜레이
+          // 카드가 화면에 보일 때
+          cards.forEach((el, index) => {
+            if (el === card) {
+              setTimeout(() => {
+                card.classList.add("show");
+              }, index * 200); // 순서에 따라 애니메이션 딜레이
+            }
           });
         } else {
-          // 화면에서 벗어나면 다시 숨기기
-          cards.forEach((card) => {
-            card.classList.remove("show");
-          });
+          // 카드가 화면에서 사라질 때
+          card.classList.remove("show");
         }
       });
     },
-    { threshold: 0.3 } // 요소가 30% 이상 화면에 보일 때 실행
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    }
   );
 
-  // 감시할 대상: intro-section 섹션
-  const introSection = document.querySelector(".intro-section");
-  if (introSection) observer.observe(introSection);
+  // 모든 카드를 관찰 대상으로 등록
+  cards.forEach((card) => observer.observe(card));
 }
