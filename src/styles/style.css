@@ -1,7 +1,8 @@
 /* CSS for the portfolio */
 @font-face {
   font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-weight: 200;
   font-style: normal;
 }
@@ -101,25 +102,24 @@ li {
   flex-wrap: wrap;
   justify-content: center;
 }
-.project-item {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  width: 80%;
-  margin: 1em;
-  font-size: 1.2em;
-}
-.project-item a {
+.project-card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
   width: 30%;
-  margin-right: 1em;
+  margin: 1em;
 }
-.project-description {
-  width: 40em;
-  text-align: left;
+
+.project-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
 }
-.project-description h3 {
+
+.project-container {
+  padding: 1em;
+}
+
+.project-container h3 {
   color: #98faec;
+  font-size: 1.5em;
 }
 
 /* Skills section styles */
