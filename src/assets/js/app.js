@@ -1,8 +1,20 @@
 // DOMContentLoaded → HTML 구조가 모두 로드된 이후 실행됨
 document.addEventListener("DOMContentLoaded", () => {
+  fadeInMainContent();
   setupSmoothScroll();
   observeIntroCards();
 });
+
+/* 메인 슬로건 떠오르기 효과  */
+function fadeInMainContent() {
+  const mainContent = document.querySelector(".right-box");
+  if (mainContent) {
+    // DOM이 완전히 로드되고 난 후 약간의 delay로 자연스러운 효과
+    setTimeout(() => {
+      mainContent.classList.add("show");
+    }, 300);
+  }
+}
 
 /* 스크롤 이동 */
 function setupSmoothScroll() {

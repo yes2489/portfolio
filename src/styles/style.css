@@ -19,7 +19,10 @@ body {
   min-height: 100vh;
   padding-top: 75px;
 }
-
+a {
+  text-decoration-line: none;
+  color: #f0f0f0;
+}
 /* Header styles */
 header {
   display: flex;
@@ -38,8 +41,6 @@ header {
 }
 .navbar a {
   margin-left: 2em;
-  text-decoration-line: none;
-  color: #f0f0f0;
 }
 .navbar a:hover {
   color: #12f7d6;
@@ -134,6 +135,9 @@ li {
 .right-box {
   text-align: left;
   justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 .right-box h1 {
   font-size: 3em;
@@ -288,7 +292,14 @@ footer {
 }
 
 /* CSS 애니메이션 */
-/* 초기에 안보이게 설정 */
+
+/* 메인 슬로건 떠오르기 효과용 */
+.right-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* intro-section 초기에 안보이게 설정 */
 .intro-card {
   opacity: 0;
   transform: translateY(30px);
