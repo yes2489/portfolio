@@ -138,13 +138,19 @@ li {
 }
 .right-box h1 {
   font-size: 3em;
-  margin-bottom: 0.5em;
 }
 .primary-text {
+  display: inline-block;
+  animation: wave 1.5s ease-in-out infinite;
   color: #98faec;
   font-weight: bold;
 }
-
+.secondary-text {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 2em;
+  display: block;
+}
 .button {
   display: flex;
   gap: 1em;
@@ -300,6 +306,16 @@ footer {
 #main-fadeIn.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 메인 슬로건 파동 */
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 /* intro-section 초기에 안보이게 설정 */
