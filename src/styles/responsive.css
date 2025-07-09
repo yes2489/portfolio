@@ -25,66 +25,66 @@
     flex-direction: column;
     gap: 1em;
   }
-  
+
   .navbar a {
     margin-left: 1em;
   }
-  
+
   .slogan p {
     font-size: 1.8em;
     padding: 0 1em;
   }
-  
+
   .introduction {
     flex-direction: column;
     margin: 2em 1em;
     text-align: center;
   }
-  
+
   .profile {
     margin-left: 0;
     margin-bottom: 2em;
   }
-  
+
   .profile > img {
     width: 250px;
     height: 250px;
   }
-  
+
   .profile a img {
     width: 18px;
     height: 18px;
   }
-  
+
   .intro {
     margin: 0;
     font-size: 1.1em;
   }
-  
+
   .intro > div {
     padding: 1em;
   }
-  
+
   .project-item {
     width: 100%;
     flex-direction: column;
     text-align: center;
   }
-  
+
   .project-item a {
     width: 100%;
     margin-right: 0;
     margin-bottom: 1em;
   }
-  
+
   .project-description {
     width: 100%;
   }
-  
+
   .skills-item {
     gap: 1em;
   }
-  
+
   .skills-item img {
     height: 24px;
   }
@@ -95,81 +95,81 @@
   header {
     padding: 1em 0.5em;
   }
-  
+
   .site-title h3 {
     font-size: 1.2em;
   }
-  
+
   .navbar a {
     margin-left: 0.5em;
     font-size: 0.9em;
   }
-  
+
   .intro-section,
   .projects-section,
   .skills-section {
     padding: 1em 0.5em;
   }
-  
+
   .slogan p {
     font-size: 1.4em;
     line-height: 1.3;
   }
-  
+
   .introduction {
     margin: 1em 0.5em;
   }
-  
+
   .profile {
     font-size: 1.2em;
   }
-  
+
   .profile > img {
     width: 200px;
     height: 200px;
   }
-  
+
   .profile a img {
     width: 16px;
     height: 16px;
   }
-  
+
   .intro {
     font-size: 1em;
   }
-  
+
   .intro p {
     font-size: 1.2em;
   }
-  
+
   .intro > div {
     padding: 0.5em;
   }
-  
+
   .title {
     font-size: 1.5em;
     margin: 1.5em 0;
   }
-  
+
   .project-item {
     font-size: 1em;
     margin: 0.5em;
   }
-  
+
   .project-description h3 {
     font-size: 1.3em;
     margin-bottom: 0.5em;
   }
-  
+
   .skills-item {
     gap: 0.5em;
     padding: 0 1em;
   }
-  
+
   .skills-item img {
     height: 20px;
   }
-  
+
   footer {
     height: 3em;
     font-size: 0.9em;
@@ -181,22 +181,22 @@
   .slogan p {
     font-size: 1.2em;
   }
-  
+
   .profile > img {
     width: 150px;
     height: 150px;
   }
-  
+
   .profile a img {
     width: 14px;
     height: 14px;
   }
-  
+
   .skills-item {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .skills-item img {
     margin: 0.2em;
   }

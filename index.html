@@ -5,105 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>YES Portfolio</title>
-    <link rel="favicon" href="./src/assets/images/favicon.ico" />
+    <link rel="icon" href="./src/assets/images/favicon.ico" />
     <link rel="stylesheet" href="./src/styles/responsive.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
   </head>
   <body>
     <header>
       <div class="site-title">
-        <h3>yes2489</h3>
+        <h3>Yang Eun Seo</h3>
       </div>
       <nav class="navbar">
         <a href="#">Home</a>
         <a
           href="https://www.notion.so/1ba6201e069f81809289d20c03c6d067?v=1ba6201e069f81989a5c000c9f4eed8c&source=copy_link"
           target="_blank"
-          >Projects</a
+          >Notion</a
         >
       </nav>
     </header>
     <main>
-      <section class="intro-section">
-        <div class="slogan">
-          <p>
-            사람과 기술을 연결하고자하는
-            <span style="color: #98faec">백엔드</span>
-            개발자, 양은서 입니다.
-          </p>
+      <section class="hero-container">
+        <div class="left-box">
+          <img src="/src/assets/images/profile.png" alt="Profile Image" />
+          <h2>양은서</h2>
+          <h3>Yang Eun Seo</h3>
+          <a href="mailto:yes24150@gmail.com">
+            <img src="./src/assets/images/icon-mail.png" />
+            yes24150@gmail.com
+          </a>
+          <a href="https://github.com/yes2489" target="_blank">
+            <img src="/src/assets/images/icon-github.png" alt="Github" />
+            Github
+          </a>
         </div>
-        <div class="introduction">
-          <div class="profile">
-            <img
-              src="./src/assets/images/profile.jpg"
-              alt="Profile Image"
-              height="350px"
-            />
-            <h2>양은서</h2>
-            <h3>Yang Eun Seo</h3>
-            <a href="mailto:yes24150@gmail.com">
-              <img src="./src/assets/images/icon-mail.png" />
-              yes24150@gmail.com
-            </a>
-            <br />
-            <a href="https://github.com/yes2489" target="_blank">
-              <img src="/src/assets/images/icon-github.png" alt="Github" />
-              Github
-            </a>
-          </div>
-          <div class="intro">
-            <div class="keywords">
-              <p>KeyStrangth</p>
-              <ul>
-                <li>- 문제 해결 중심의 리더십과 구조적 커뮤니케이션 능력</li>
-                <li>- 보안 인프라와 개발을 모두 고려하는 IT 역량 보유</li>
-                <li>
-                  - 보안 솔루션 설치부터 백엔드 개발까지 경험한 실무형 개발자
-                </li>
-              </ul>
-            </div>
-            <div class="education">
-              <p>Education / Experience</p>
-              <ul>
-                <li>- 25.07 ~ | 우리FISA 클라우드 서비스 개발</li>
-                <li>
-                  - 24.07 - 25.06 | 삼성청년SW·AI아카데미 12기 비전공 자바 수료
-                </li>
-                <li>
-                  - 24.05 - 24.07 | K-Shield Junior 12기 보안관리 및 진단과정
-                  수료
-                </li>
-                <li>
-                  - 22.09 - 24.02 | 보안 솔루션 회사 근무 (시스템 엔지니어)
-                </li>
-                <li>- 22.03 - 22.09 | 대한상공회의소 정보보안실무과정 수료</li>
-                <li>- 19.03 - 22.02 | 푸르니 보육지원재단 근무 (보육교사)</li>
-              </ul>
-            </div>
-            <div class="certificates">
-              <p>Awards & Certificates</p>
-              <ul>
-                <li>
-                  - 신용도 시스템 기반 금융 교육 플랫폼 개발 PJT - 우수상
-                  (SSAFY)
-                </li>
-                <li>
-                  - 직장인을 위한 건강 증진 웹 서비스 개발 PJT - 최우수상
-                  (SSAFY)
-                </li>
-                <li>- TOEIC Speaking AL</li>
-                <li>
-                  - 정보처리기사, SQLD, 리눅스 마스터 2급, 네트워크 관리사 2급
-                  취득
-                </li>
-              </ul>
-            </div>
+        <div class="right-box">
+          <h1>
+            사람과 기술을 연결하고자하는 <br />
+            <span>백엔드 개발자</span> 양은서 입니다.
+          </h1>
+          <div class="button">
+            <a href="#aboutMe" class="content-btn">About Me</a>
+            <a href="#projects" class="content-btn">Projects</a>
           </div>
         </div>
       </section>
-      <section class="projects-section">
-        <p class="title">My Projects</p>
-        <div class="project-list">
+      <section class="intro-section" id="aboutMe">
+        <h2 class="section-title">🙋‍♀️ About Me</h2>
+        <p class="intro-summary">
+          다양한 이해관계자와의 협업을 통해 실천력과 조율력을 키운 개발자
+          양은서입니다.<br />
+          팀워크 속에서 균형을 찾고, 문제의 본질을 놓치지 않는 개발을
+          지향합니다.
+        </p>
+        <div class="intro-cards">
+          <div class="intro-card">
+            <h3>💡 Key Strength</h3>
+            <ul>
+              <li>문제 해결 중심의 리더십</li>
+              <li>구조적 커뮤니케이션 역량</li>
+              <li>보안과 개발을 아우르는 IT 스킬</li>
+            </ul>
+          </div>
+          <div class="intro-card">
+            <h3>💼 Education & Experience</h3>
+            <ul>
+              <li>우리FISA 클라우드 서비스 개발 (25.07~)</li>
+              <li>삼성청년SW·AI아카데미 12기 Java 수료</li>
+              <li>K-Shield Junior 12기 보안관리 및 진단과정 수료</li>
+              <li>보안 솔루션 엔지니어 (1년 5개월)</li>
+            </ul>
+          </div>
+          <div class="intro-card">
+            <h3>🏆 Awards & Certificates</h3>
+            <ul>
+              <li>신용도 시스템 기반 금융 교육 플랫폼 - 우수상 (SSAFY)</li>
+              <li>건직장인을 위한 건강 증진 웹 서비스 - 최우수상 (SSAFY)</li>
+              <li>
+                정보처리기사, SQLD (개발자), 리눅스 마스터 2급, 네트워크 관리사
+                2급 취득
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="projects-section" id="projects">
+        <h2 class="section-title">🤝 My Projects</h2>
+        <div class="project-cards">
           <div class="project-card">
             <a href="https://github.com/yes2489/LuFin" target="_blank"
               ><img
@@ -111,15 +98,15 @@
                 alt="LuFin"
                 width="100%"
             /></a>
+            <div class="project-skills">
+              <span class="java">Java</span>
+              <span class="springBoot">SpringBoot</span>
+              <span class="mysql">MySQL</span>
+              <span class="redis">Redis</span>
+            </div>
             <div class="project-container">
               <h3>LuFin</h3>
-              <p>
-                청소년을 대상으로 경제 개념을 쉽고 재미있게 학습할 수 있도록
-              </p>
-              <p>
-                자산 관리 시뮬레이션 기능을 제공하는 경제 교육 플랫폼
-                프로젝트입니다.
-              </p>
+              <p>신용도 시스템 기반 금융 교육 플랫폼 개발</p>
             </div>
           </div>
           <div class="project-card">
@@ -129,15 +116,17 @@
                 alt="KeyWe"
                 width="100%"
             /></a>
+            <div class="project-skills">
+              <span class="java">Java</span>
+              <span class="springBoot">SpringBoot</span>
+              <span class="mysql">MySQL</span>
+              <span>MSA</span>
+            </div>
             <div class="project-container">
               <h3>KeyWe</h3>
               <p>
-                시니어 사용자를 대상으로 보호자가 원격으로 키오스크 주문을
-                도와줄 수 있도록
-              </p>
-              <p>
-                대리 주문 및 계정 연동 기능을 제공하는 비대면 주문 지원
-                서비스입니다.
+                보호자가 원격으로 시니어의 키오스크 주문을 돕는 비대면 지원
+                서비스
               </p>
             </div>
           </div>
@@ -148,19 +137,20 @@
                 alt="OfficeOlympics"
                 width="100%"
             /></a>
+            <div class="project-skills">
+              <span class="java">Java</span>
+              <span class="springBoot">SpringBoot</span>
+              <span class="mysql">MySQL</span>
+            </div>
             <div class="project-container">
               <h3>Office Olympics</h3>
-              <p>직장인을 대상으로 팀워크와 건강 증진을 돕기 위해</p>
-              <p>
-                게임형 챌린지 및 실시간 점수 관리 기능을 제공하는 사내 조직 강화
-                플랫폼입니다.
-              </p>
+              <p>팀워크 및 건강 증진 웹 플랫폼 개발</p>
             </div>
           </div>
         </div>
       </section>
       <section class="skills-section">
-        <p class="title">Skills</p>
+        <h2 class="section-title">🛠️ Skills</h2>
         <div class="skills-list">
           <div class="skills-item">
             <img
