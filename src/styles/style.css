@@ -209,11 +209,13 @@ li {
 }
 
 .project-card {
+  display: block;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
   transition: 0.3s;
   width: 30%;
 }
 .project-card:hover {
+  transform: scale(1.03); /* 살짝 커지기 */
   box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -283,4 +285,18 @@ footer {
   align-items: center;
   height: 5em;
   color: #f0f0f0;
+}
+
+/* CSS 애니메이션 */
+/* 초기에 안보이게 설정 */
+.intro-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+/* 활성화되면 나타나기 */
+.intro-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
