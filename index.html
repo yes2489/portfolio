@@ -7,6 +7,7 @@
     <link rel="icon" href="./src/assets/images/favicon.ico" />
     <link rel="stylesheet" href="./src/styles/responsive.css" />
     <link rel="stylesheet" href="./src/styles/style.css" />
+    <link rel="preload" as="image" href="./src/assets/images/profile.webp" />
     <script src="./src/js/app.js"></script>
   </head>
   <body>
@@ -24,11 +25,16 @@
     <main>
       <section class="hero-container" id="home">
         <div class="left-box">
-          <img src="./src/assets/images/profile.png" alt="Profile Image" />
+          <img
+            src="./src/assets/images/profile.webp"
+            alt="Profile Image"
+            width="auto"
+            height="auto"
+          />
           <h2>양은서</h2>
           <h3>Yang Eun Seo</h3>
           <a href="mailto:yes24150@gmail.com">
-            <img src="./src/assets/images/icon-mail.png" />
+            <img src="./src/assets/images/icon-mail.png" alt="email" />
             yes24150@gmail.com
           </a>
           <a href="https://github.com/yes2489" target="_blank">
@@ -41,7 +47,9 @@
             <span>사람과 기술을 연결하고자 하는 </span><br />
             <span class="primary-text">백엔드 개발자</span> 양은서 입니다.
           </h1>
-          <span class="secondary-text">사용자의 시선으로 고민하고, 기술로 풀어내는 데 집중합니다.</span>
+          <span class="secondary-text"
+            >사용자의 시선으로 고민하고, 기술로 풀어내는 데 집중합니다.</span
+          >
           <div class="button">
             <a href="#aboutMe" class="content-btn">About Me</a>
             <a href="#projects" class="content-btn">Projects</a>
@@ -51,8 +59,10 @@
       <section class="intro-section" id="aboutMe">
         <h2 class="section-title">🙋‍♀️ About Me</h2>
         <p class="intro-summary">
-          다양한 이해관계자와의 협업을 통해 실천력과 조율력을 키운 개발자 양은서입니다.<br />
-          팀워크 속에서 균형을 찾고, 문제의 본질을 놓치지 않는 개발을 지향합니다.
+          다양한 이해관계자와의 협업을 통해 실천력과 조율력을 키운 개발자
+          양은서입니다.<br />
+          팀워크 속에서 균형을 찾고, 문제의 본질을 놓치지 않는 개발을
+          지향합니다.
         </p>
         <div class="intro-cards">
           <div class="intro-card">
@@ -153,24 +163,31 @@
           <div class="skills-item">
             <img
               src="https://img.shields.io/badge/linux-%23FCC624.svg?&style=flat-square&logo=linux&logoColor=black"
+              alt="linux"
             />
             <img
               src="https://img.shields.io/badge/shell_script-%23121011.svg?style=flat-square&logo=gnu-bash&logoColor=white"
+              alt="shell-script"
             />
             <img
               src="https://img.shields.io/badge/mariadb-%23003545.svg?&style=flat-square&logo=mariadb&logoColor=white"
+              alt="mariadb"
             />
             <img
               src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=flat-square&logo=microsoft%20sql%20server&logoColor=white"
+              alt="mssql"
             />
             <img
               src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=flat-square&logo=mysql&logoColor=white"
+              alt="mysql"
             />
             <img
               src="https://img.shields.io/badge/java-%23007396.svg?&style=flat-square&logo=java&logoColor=white"
+              alt="java"
             />
             <img
               src="https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white"
+              alt="spring"
             />
           </div>
         </div>
