@@ -5,6 +5,8 @@
     format("woff");
   font-weight: normal;
   font-style: normal;
+  /* 기간 내 글꼴이 로드되지 않으면 해당 글꼴을 사용하는 글자에 대체 글꼴 적용*/
+  font-display: swap;
 }
 
 * {
@@ -310,7 +312,8 @@ footer {
 
 /* 메인 슬로건 파동 */
 @keyframes wave {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
