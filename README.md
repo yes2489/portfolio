@@ -3,28 +3,34 @@
 ## 🔁 개선 및 변경 사항
 
 ### 1. 디렉토리 구조 및 정리
+
 - 기존 `assets/` 중심 구조 → `src/assets/`, `src/styles/`, `src/js/` 로 **역할별로 분리하여 모듈화**
 - 역할별 폴더 분리로 **유지보수성과 가독성 향상**
 
 ### 2. 정보 구조 재설계
+
 - `Hero`, `About Me`, `Projects`, `Skills` 등으로 구분
 - 각 섹션을 `<section>` 단위로 나누고, **title 위치, 배경, padding** 등 시각 구조 통일
 
 ### 3. 디자인 일관성 및 컴포넌트화
+
 - `project-card`, `intro-card`를 **카드형 컴포넌트**로 통일
 - 각 섹션의 콘텐츠 정렬, 글자 크기, 여백 등을 동일하게 유지하여 **UX 흐름 개선**
 
 ### 4. 인터랙션 및 동적 효과 추가
+
 - `Hero` 슬로건에 **페이드 인 애니메이션**
 - `IntersectionObserver`로 `Intro` 카드들이 스크롤 시 순차 등장
 - 프로젝트 카드 `hover` 시 약간 확대되며 그림자 강조
 
 ### 5. 내비게이션 구조 개선
+
 - 기존 외부 링크 → `#home`, `#aboutMe`, `#projects`, `#skills`로 **앵커 구조 변경**
 - `scroll-margin-top` 처리로 고정 헤더 하단에 섹션이 잘리거나 붙지 않도록 조정
 - `scrollIntoView`로 부드러운 스크롤 이동
 
 ### 6. 뷰포트 단위 레이아웃 정비
+
 - `min-height: 90vh`를 섹션에 적용해 스크롤 시 한 화면에 한 블록이 자연스럽게 진입
 - 콘텐츠 높이에 따라 **padding 조절**, 레이아웃 비대칭 방지
 
@@ -39,13 +45,24 @@ JavaScript 초기화 시점에서 DOM이 완전히 로드된 후 실행되도록
 
 ```js
 document.addEventListener("DOMContentLoaded", () => {
-  fadeInMainContent();     // 메인 슬로건 fadeIn
-  setupSmoothScroll();     // 내부 링크 부드러운 스크롤
-  observeIntroCards();     // About Me 카드 등장 애니메이션
+  fadeInMainContent(); // 메인 슬로건 fadeIn
+  setupSmoothScroll(); // 내부 링크 부드러운 스크롤
+  observeIntroCards(); // About Me 카드 등장 애니메이션
 });
 ```
 
 > 기능을 별도 함수로 나누어 역할 명확성, 가독성, 유지보수성을 높임
+
+#### `window.onload`와의 주요 차이점
+
+- DOMContentLoaded는 스타일시트, 이미지, 하위 프레임의 로드를 기다리지 않기 때문에 window.onload보다 훨씬 빨리 발생
+- DOM이 준비되자마자 JS를 초기화해야 하는 경우 DOMContentLoaded를 사용
+- 페이지의 모든 콘텐츠(이미지 및 스타일시트 포함)에 의존하는 작업을 수행해야 하는 경우 window.onload를 사용
+
+#### 각 이벤트의 사용 시기
+
+- **DOMContentLoaded**: UI 구성 요소를 초기화하거나, 이벤트 리스너를 설정하거나, DOM이 사용할 수 있게 되자마자 조작하는 작업에 이상적
+- **window.onload**: 모든 리소스가 로드된 후에 수행해야 하는 이미지 슬라이더 설정 또는 이미지가 완전히 로드된 후 크기가 결정되는 요소에 대한 작업에 적합
 
 ---
 
@@ -80,7 +97,10 @@ function setupSmoothScroll() {
 > fixed header의 높이를 반영하기 위해 `scroll-margin-top` 속성을 CSS에서 활용하여 조정하였음
 
 ```css
-#home, #aboutMe, #projects, #skills {
+#home,
+#aboutMe,
+#projects,
+#skills {
   scroll-margin-top: 75px;
 }
 ```
@@ -139,7 +159,7 @@ function observeIntroCards() {
 `project-card` 전체를 `<a>`로 감싸야 전체 클릭이 가능하지만, HTML5 문법 상 `<a>`가 블록 요소를 감싸는 것이 허용된다는 점을 고려하여 아래와 같이 작성하였음
 
 ```html
-<a href="..." target="_blank"  class="project-card">
+<a href="..." target="_blank" class="project-card">
   <img src="..." />
   <div class="project-skills">...</div>
   <div class="project-container">...</div>
@@ -161,36 +181,36 @@ function observeIntroCards() {
 
 ### 1. 이미지 최적화
 
-* 기존 `.png` 이미지 중 용량이 큰 항목을 `WebP` 형식으로 전환
-* 실제 표시 크기에 맞는 이미지 리사이징 및 `<img>` 태그에 `width`/`height` 속성 명시
-* 주요 이미지에 `preload` 적용하여 LCP (Largest Contentful Paint) 지연 완화
+- 기존 `.png` 이미지 중 용량이 큰 항목을 `WebP` 형식으로 전환
+- 실제 표시 크기에 맞는 이미지 리사이징 및 `<img>` 태그에 `width`/`height` 속성 명시
+- 주요 이미지에 `preload` 적용하여 LCP (Largest Contentful Paint) 지연 완화
 
 ### 2. 렌더링 성능 개선
 
-* 메인 텍스트 폰트에 `font-display: swap` 속성 적용 → 초기 렌더링 지연 방지
-* Hero 섹션의 핵심 콘텐츠에 `lazy-loading` 대신 `preload` 방식 적용 고려
+- 메인 텍스트 폰트에 `font-display: swap` 속성 적용 → 초기 렌더링 지연 방지
+- Hero 섹션의 핵심 콘텐츠에 `lazy-loading` 대신 `preload` 방식 적용 고려
 
 ### 3. 접근성 향상
 
-* alt 속성이 누락된 이미지 및 아이콘 요소 보완
+- alt 속성이 누락된 이미지 및 아이콘 요소 보완
 
 ### 4. 정적 자원 캐싱 및 전달 최적화
 
-* 빌드 도구를 도입하거나 CDN 연동을 통해 정적 리소스(`.css`, `.js`, `.png`)에 `cache-control` 헤더 설정 계획
-* GitHub Pages 한계를 보완할 수 있는 배포 구조 검토
+- 빌드 도구를 도입하거나 CDN 연동을 통해 정적 리소스(`.css`, `.js`, `.png`)에 `cache-control` 헤더 설정 계획
+- GitHub Pages 한계를 보완할 수 있는 배포 구조 검토
 
 ### 5. 반응형 UX 보완
 
-* 모바일 해상도에서 과도한 여백(`padding: 10em`)을 줄이고, 콘텐츠 간 배치 최적화
-* 다만, 데스크탑 기준에서는 디자인 일관성을 유지할 계획
+- 모바일 해상도에서 과도한 여백(`padding: 10em`)을 줄이고, 콘텐츠 간 배치 최적화
+- 다만, 데스크탑 기준에서는 디자인 일관성을 유지할 계획
 
 ---
 
 ## 📌 다음 작업 계획
 
-* Skills 섹션 Progress UI 추가
-* 프로젝트 상세 페이지 연결 및 설명 보강
-* SEO 최적화
+- Skills 섹션 Progress UI 추가
+- 프로젝트 상세 페이지 연결 및 설명 보강
+- SEO 최적화
 
 ---
 
