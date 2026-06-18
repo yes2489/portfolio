@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  
+  /* Colors */
+  --color-accent: #38BDF8;
+  --color-accent-hover: #7DD3FC;
+  --color-warning: #FF5B73;
+
+  --dark-bg: #0F172A;
+  --dark-bg-secondary: #1E293B;
+  --dark-text: #E2E8F0;
+  --dark-text-secondary: #94A3B8;
+  --dark-border: #334155;
+
+  --project-bg: #F4F7FB;
+  --project-bg-alt: #E8EEF6;
+  --project-text-main: #172033;
+  --project-text-sub: #526174;
+  --project-text-light: #F8FAFC;
+  --project-accent-deep: #0284C7;
+  --project-border: #D8E2EE;
+
+  --project-card-bg: #2A3B55;
+  --project-card-bg-strong: #24344D;
+  --project-card-border: #415168;
+  --project-card-text: #F1F5F9;
+  --project-card-text-muted: #CBD5E1;
+  --project-card-text-sub: #94A3B8;
+  
+  --project-code-bg: #0B1020;
+  --project-code-line-bg: rgba(148, 163, 184, 0.06);
+  --project-code-text: #D7E0EF;
+  --project-code-muted: #64748B;
+  --project-code-keyword: #93C5FD;
+  --project-code-string: #86EFAC;
+  --project-code-number: #FCD34D;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem; /* 태그, 프로젝트 */
+  --font-size-sm: 0.875rem; /* 네비게이션 링크, 프로젝트 설명, 기술 아이템 */
+  --font-size-base-sm: 0.9375rem; /* 소개 카드 리스트 */
+  --font-size-base: 1rem; /* hero 인사말, 카드 제목, 모바일 타이틀 등 */
+  --font-size-md: 1.125rem; /* 설명, 소개 글, 연락처 본문 */
+  --font-size-lg: 1.25rem; /* 로고, 프로젝트 제목 */
+  --font-size-xl: 1.5rem; /* 모바일 메뉴 링크, 모바일 섹션 제목 */
+  --font-size-xl-mob: 1.75rem; /* 모바일 hero 제목 */
+  --font-size-xxl: 2rem; /* PC 섹션 제목 */ 
+  --font-size-hero: clamp(2rem, 5vw, 3.5rem); /* PC 히어로 제목 */
+
+  /* Typography */
+  --font-sans: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --container-max: 1200px;
+
+  /* Transitions */
+  --transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+
+/* 태그, 프로젝트 */
+.fs-xs {
+  font-size: var(--font-size-xs); 
+}
+
+/* 네비게이션 링크, 프로젝트 설명, 기술 아이템 */
+.fs-sm {
+  font-size: var(--font-size-sm);
+}
+
+/* 소개 카드 리스트 */
+.fs-base-sm {
+  font-size: var(--font-size-base-sm);
+}
+
+/* hero 인사말, 카드 제목, 모바일 타이틀 등 */
+.fs-base {
+  font-size: var(--font-size-base);
+}
+
+/* 설명, 소개 글, 연락처 본문 */
+.fs-md {
+  font-size: var(--font-size-md);
+}
+
+/* 로고, 프로젝트 제목 */
+.fs-lg {
+  font-size: var(--font-size-lg);
+}
+
+/* 모바일 메뉴 링크, 모바일 섹션 제목 */
+.fs-xl {
+  font-size: var(--font-size-xl);
+}
+
+/* 모바일 hero 제목 */
+.fs-xl-mob {
+  font-size: var(--font-size-xl-mob);
+}
+
+/* PC 섹션 제목 */
+.fs-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+/* PC 히어로 제목 */
+.fs-hero {
+  font-size: var(--font-size-hero);
+}
